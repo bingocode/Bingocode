@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Bingocode:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="whu.bingo.war">
+      <element id="artifact" artifact-name="Bingocode:war exploded" />
+    </root>
+  </artifact>
+</component>
