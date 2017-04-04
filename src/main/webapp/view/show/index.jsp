@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="/view/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="/view/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/view/css/myinit.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <base target="_blank">
 </head>
 <body>
   <div class="navbar-fixed">
@@ -49,24 +51,24 @@
    <div class="slider">
     <ul class="slides">
       <li>
-        <img src="/view/images/background1.jpg"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>这是一个巨大的标签行</h3>
-          <h5 class="light grey-text text-lighten-3">这是我们的小口号。</h5>
+        <img id="sliderimg1" src="/view/images/background1.jpg"> <!-- random image -->
+        <div class="caption center-align" id="slider1">
+          <h3 id="slider11">个性化推介标题1</h3>
+          <h5 id="slider12" class="light grey-text text-lighten-3">作者1</h5>
         </div>
       </li>
       <li>
-        <img src="/view/images/background2.jpg"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>这是一个巨大的标签行</h3>
-          <h5 class="light grey-text text-lighten-3">这是我们的小口号。</h5>
+        <img id="sliderimg2" src="/view/images/background2.jpg"> <!-- random image -->
+        <div class="caption center-align" id="slider2">
+            <h3 id="slider21">个性化推介标题2</h3>
+            <h5 id="slider22" class="light grey-text text-lighten-3">作者2</h5>
         </div>
       </li>
        <li>
-        <img src="/view/images/background3.jpg"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>这是一个巨大的标签行</h3>
-          <h5 class="light grey-text text-lighten-3">这是我们的小口号。</h5>
+        <img id="sliderimg3" src="/view/images/background3.jpg"> <!-- random image -->
+        <div class="caption center-align" id="slider3">
+            <h3 id="slider31">个性化推介标题3</h3>
+            <h5 id="slider32" class="light grey-text text-lighten-3">作者3</h5>
         </div>
       </li>
     </ul>
@@ -77,27 +79,81 @@
     
     <h4 class="header">本周最热</h4>
      <div class="card z-depth-3">
-     <table class="striped centered">
+     <table id="top5ranklist" class="striped centered">
         <thead>
           <tr>
-              <th data-field="id">Top10</th>
-             
+              <th>作者</th>
+              <th>标题</th>
+              <th></th>
           </tr>
         </thead>
-
         <tbody>
-          <tr>
-            <td>张三</td>
-        
-          </tr>
-          <tr>
-            <td>李四</td>
-         
-          </tr>
-          <tr>
-            <td>李明</td>
-           
-          </tr>
+        <tr id="rank1">
+            <td id="rankd11" >
+                作者1
+            </td>
+
+            <td id="rankd12">
+                Android 滑动冲突的解决方案
+            </td>
+            <td id="rankd13">
+                <i class="material-icons right" id="cardfavor1" href="account">favorite_border</i>
+                <i class="material-icons right"id="cardshare1" href="account">share</i>
+            </td>
+        </tr>
+        <tr id="rank2">
+            <td id="rankd21" >
+                作者1
+            </td>
+
+            <td id="rankd22">
+                Android 滑动冲突的解决方案
+            </td>
+            <td id="rankd23">
+                <i class="material-icons right" id="cardfavor1" href="account">favorite_border</i>
+                <i class="material-icons right"id="cardshare1" href="account">share</i>
+            </td>
+        </tr>
+        <tr id="rank3">
+            <td id="rankd31" >
+                作者1
+            </td>
+
+            <td id="rankd32">
+                Android 滑动冲突的解决方案
+            </td>
+            <td id="rankd33">
+                <i class="material-icons right" id="cardfavor1" href="account">favorite_border</i>
+                <i class="material-icons right"id="cardshare1" href="account">share</i>
+            </td>
+        </tr>
+        <tr id="rank4">
+            <td id="rankd41" >
+                作者1
+            </td>
+
+            <td id="rankd42">
+                Android 滑动冲突的解决方案
+            </td>
+            <td id="rankd43">
+                <i class="material-icons right" id="cardfavor1" href="account">favorite_border</i>
+                <i class="material-icons right"id="cardshare1" href="account">share</i>
+            </td>
+        </tr>
+        <tr id="rank5">
+            <td id="rankd51" >
+                作者1
+            </td>
+
+            <td id="rankd52">
+                Android 滑动冲突的解决方案
+            </td>
+            <td id="rankd53">
+                <i class="material-icons right" id="cardfavor1" href="account">favorite_border</i>
+                <i class="material-icons right"id="cardshare1" href="account">share</i>
+            </td>
+        </tr>
+
         </tbody>
       </table>
       </div>
@@ -108,148 +164,116 @@
         <div class="col s6 offset-s3">
           <div class="card small">
             <div class="card-image">
-              <img class="materialboxed" src="/view/images/1.jpg">
-              <span class="card-title">Card Title</span>
+              <img id="cardimg1" class="materialboxed" src="/view/images/background1.jpg">
+              <span id="cardtitle1" class="card-title">Card Title</span>
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">卡片标题
-      <i class="material-icons right" id="favorite1">favorite_border</i>
-              <i class="material-icons right"id="share">share</i>
+              <span id="cardwho1" class="card-title grey-text text-darken-4">作者</span>
+      <i class="material-icons right" id="cardfavor1" href="account">favorite_border</i>
+              <i class="material-icons right"id="cardshare1" href="account">share</i>
             </div>
             <div class="card-action">
-              <a href="#">这是一个链接</a>
+              <a id="cardurl1" href="#">查看详情</a>
             </div>
           </div>
         </div>
       </div>
       
 
- <h4 class="center-align"><a href="#">更多</a></h4>
+ <h4 class="center-align"><a href="android">更多</a></h4>
 
     </div>
   </div>
 
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="/view/images/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
 
   <div class="container  teal lighten-5">
     <div class="section">
 <h4 class="header">IOS</h4>
 
-  <div class="row">
-        <div class="col s6 offset-s3">
-          <div class="card small">
-            <div class="card-image">
-              <img src="/view/images/1.jpg">
-              <span class="card-title">Card Title</span>
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="card small">
+                    <div class="card-image">
+                        <img id="cardimg2" class="materialboxed" src="/view/images/background1.jpg">
+                        <span id="cardtitle2" class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <span id="cardwho2" class="card-title  grey-text text-darken-4">作者</span>
+      <i class="material-icons right" id="cardfavor2">favorite_border</i>
+              <i class="material-icons right"id="cardshare2">share</i>
+                    </div>
+                    <div class="card-action">
+                        <a id="cardurl2" href="#">查看详情</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">卡片标题
-      <i class="material-icons right" >favorite_border</i>
-              <i class="material-icons right">share</i>
-            </div>
-            <div class="card-action">
-              <a href="#">这是一个链接</a>
-            </div>
-          </div>
         </div>
-      </div>
-      
 
- <h4 class="center-align"><a href="#">更多</a></h4>
+
+        <h4 class="center-align"><a href="ios">更多</a></h4>
 
     </div>
   </div>
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="/view/images/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
+
 
 <div class="container  teal lighten-5">
     <div class="section">
 <h4 class="header">前端</h4>
-  <div class="row">
-        <div class="col s6 offset-s3">
-          <div class="card small">
-            <div class="card-image">
-              <img src="/view/images/1.jpg">
-              <span class="card-title">Card Title</span>
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="card small">
+                    <div class="card-image">
+                        <img id="cardimg3" class="materialboxed" src="/view/images/background1.jpg">
+                        <span id="cardtitle3" class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <span id="cardwho3" class="card-title  grey-text text-darken-4">作者</span>
+      <i class="material-icons right" id="cardfavor3">favorite_border</i>
+              <i class="material-icons right"id="cardshare3">share</i>
+                    </div>
+                    <div class="card-action">
+                        <a id="cardurl3" href="#">查看详情</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">卡片标题
-      <i class="material-icons right" >favorite_border</i>
-              <i class="material-icons right">share</i>
-            </div>
-            <div class="card-action">
-              <a href="#">这是一个链接</a>
-            </div>
-          </div>
         </div>
-      </div>
-      
 
- <h4 class="center-align"><a href="#">更多</a></h4>
+
+        <h4 class="center-align"><a href="web">更多</a></h4>
 
     </div>
-  </div>
-  
-  
-  
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="/view/images/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
+</div>
+
 
  <div class="container  teal lighten-5">
     <div class="section">
 <h4 class="header">小短片</h4>
-  <div class="row">
-        <div class="col s6 offset-s3">
-          <div class="card small">
-            <div class="card-image">
-              <img src="/view/images/1.jpg">
-              <span class="card-title">Card Title</span>
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="card small">
+                    <div class="card-image">
+                        <img id="cardimg4" class="materialboxed" src="/view/images/background1.jpg">
+                        <span id="cardtitle4" class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <span id="cardwho4" class="card-title  grey-text text-darken-4">作者</span>
+      <i class="material-icons right" id="cardfavor4">favorite_border</i>
+              <i class="material-icons right"id="cardshare4">share</i>
+                    </div>
+                    <div class="card-action">
+                        <a id="cardurl4" href="#">查看详情</a>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">卡片标题
-      <i class="material-icons right" >favorite_border</i>
-              <i class="material-icons right">share</i>
-            </div>
-            <div class="card-action">
-              <a href="#">这是一个链接</a>
-            </div>
-          </div>
         </div>
-      </div>
-      
 
- <h4 class="center-align"><a href="#">更多</a></h4>
+
+        <h4 class="center-align"><a href="video">更多</a></h4>
 
     </div>
-  </div>
-  
+ </div>
   
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -300,7 +324,7 @@
   <script src="/view/js/materialize.js"></script>
   <script src="/view/js/init.js"></script>
     <script src="/view/js/myinit.js"></script>
-      <script src="/view/js/bingocode.js"></script>
+      <script src="/view/js/indexjs.js"></script>
 
   </body>
 </html>
