@@ -2,3 +2,6 @@
   padding-top: 1rem;
   padding-bottom: 13rem !important;
 }
+#myresultlist li{
+  opacity: 0;
+}

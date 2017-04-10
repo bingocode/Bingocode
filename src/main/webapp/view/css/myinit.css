@@ -1,3 +1,11 @@
 li>img,i,a{
     cursor:pointer;
 }
+
+#section {
+  padding-top: 1rem;
+  /*padding-bottom: 13rem !important;*/
+  padding-left: 5%!important;
+  padding-right: 5%!important;
+
+}

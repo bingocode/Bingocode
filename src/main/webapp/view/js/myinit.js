@@ -1,6 +1,6 @@
 // JavaScript Document
 $(document).ready(function(){
-  $('ul.tabs').tabs();
+
   $('.slider').slider({full_width: true});
   $('.carousel.carousel-slider').carousel({full_width: true});
   $('.modal').modal({

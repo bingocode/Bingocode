@@ -1,4 +1,8 @@
 #section {
-  padding-top: 1rem;
-  padding-bottom: 15rem !important;
+    padding-bottom: 15rem !important;
+}
+
+#myhead {
+  height: 200;
+  width: 200;
 }
