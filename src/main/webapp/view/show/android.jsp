@@ -4,7 +4,7 @@
   <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-  <title>Android</title>
+  <title>BingoCode</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,7 +13,7 @@
   <link href="/view/css/myinit.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="/view/css/androidcss.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
-  <base target="_blank">
+
 </head>
 
 <body>
@@ -29,15 +29,15 @@
         <li><a href="video">小短片</a></li>
         <li><a href="about">关于</a></li>
         <li> <a class='dropdown-button btn' data-activates='dropdown1'>登录</a>
-          <ul id='dropdown1' class='dropdown-content'>
-            <li><a id="loginli">QQ登录</a></li>
-            <li class="divider"></li>
-            <li><a>新浪微博登录</a></li>
-            <li class="divider"></li>
-            <li><a>手机号登录</a></li>
-          </ul>
-        </li>
-      </ul>
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="account" id="loginli">QQ登录</a></li>
+                        <li class="divider"></li>
+                        <li><a>新浪微博登录</a></li>
+                        <li class="divider"></li>
+                        <li><a>手机号登录</a></li>
+                    </ul>
+                </li>
+            </ul>
       <!-- Modal Structure -->
       <!-- Modal Structure -->
 

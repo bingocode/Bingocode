@@ -12,7 +12,6 @@
     <link href="/view/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/view/css/myinit.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/view/css/searchcss.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <base target="_blank">
 </head>
 <body>
 <div class="navbar-fixed">
@@ -20,13 +19,20 @@
         <div class="nav-wrapper container">
             <a id="logo-container" href="index" class="brand-logo">BingoCode</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="search"><i class="material-icons">search</i></a></li>
+                <li class="active"><a href="search"><i class="material-icons">search</i></a></li>
                 <li><a href="android">Android</a></li>
                 <li><a href="ios">IOS</a></li>
                 <li><a href="web">前端</a></li>
                 <li><a href="video">小短片</a></li>
                 <li><a href="about">关于</a></li>
-                <li><a class="waves-effect waves-light btn" href="account">登录</a>
+                <li> <a class='dropdown-button btn' data-activates='dropdown1'>登录</a>
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="account" id="loginli">QQ登录</a></li>
+                        <li class="divider"></li>
+                        <li><a>新浪微博登录</a></li>
+                        <li class="divider"></li>
+                        <li><a>手机号登录</a></li>
+                    </ul>
                 </li>
             </ul>
             <!-- Modal Structure -->
@@ -82,8 +88,8 @@
   </div>
     
     
-     <ul class="center collection">
-         <li class="collection-item dismissable"><span id="c1">Android 混淆打包</span>
+     <ul  id="myresultlist" class="center collection">
+         <li  class="collection-item dismissable"><span id="c1">Android 混淆打包</span>
              <i class="material-icons right" id="favorite1">favorite_border</i>
               <i class="material-icons right"id="share1">share</i>
              </li>
@@ -132,13 +138,13 @@
       <div class="card">
 
           <ul id="chosepage" class="center pagination">
-    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class="active"><a href="#!">1</a></li>
-    <li class="waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!">3</a></li>
-    <li class="waves-effect"><a href="#!">4</a></li>
-    <li class="waves-effect"><a href="#!">5</a></li>
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    <li class="disabled"><a><i class="material-icons">chevron_left</i></a></li>
+    <li class="active"><a>1</a></li>
+    <li class="waves-effect"><a>2</a></li>
+    <li class="waves-effect"><a>3</a></li>
+    <li class="waves-effect"><a>4</a></li>
+    <li class="waves-effect"><a>5</a></li>
+    <li class="waves-effect"><a><i class="material-icons">chevron_right</i></a></li>
   </ul>
       </div>
       

@@ -11,7 +11,6 @@
   <link href="/view/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="/view/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/view/css/myinit.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <base target="_blank">
 </head>
 <body>
 <div class="navbar-fixed">
@@ -27,7 +26,7 @@
                 <li><a href="about">关于</a></li>
                 <li> <a class='dropdown-button btn' data-activates='dropdown1'>登录</a>
                     <ul id='dropdown1' class='dropdown-content'>
-                        <li><a id="loginli">QQ登录</a></li>
+                        <li><a href="account" id="loginli">QQ登录</a></li>
                         <li class="divider"></li>
                         <li><a>新浪微博登录</a></li>
                         <li class="divider"></li>
@@ -200,7 +199,7 @@
                         <span id="cardwho1" class="grey-text text-darken-4">ezy</span>
                         <i class="material-icons right" id="cardfavor1" href="account">favorite_border</i>
                         <i class="material-icons right" id="cardshare1" href="account">share</i>
-                        <i class="material-icons right tooltipped" data-position="bottom" data-delay="50" data-tooltip="下载高清图片" id="carddownload">file_download</i>
+                        <i class="material-icons right tooltipped" data-position="bottom" data-delay="50" data-tooltip="下载高清图片" id="carddownloadm">file_download</i>
 
                     </div>
                     <div class="card-action">

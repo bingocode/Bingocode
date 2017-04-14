@@ -7,11 +7,22 @@ $(function(){
 
 //下载图片
     function downloadImage(src) {
-    var a = $("<a></a>").attr("href", src).attr("download", "img.jpg").appendTo("body");
+    var $a = document.createElement('a');
+    $a.setAttribute("href", src);
+    $a.setAttribute("download", "a.jpg");
 
-    a[0].click();
-    a.remove();
-}
+    var evObj = document.createEvent('MouseEvents');
+    evObj.initMouseEvent( 'click', true, true, window, 0, 0, 0, 0, 0, false, false, true, false, 0, null);
+    $a.dispatchEvent(evObj);
+    }
+        /*var oPop = window.open(src,"","width=1, height=1, top=5000, left=5000");
+for(; oPop.document.readyState != "complete"; )
+{ if (oPop.document.readyState == "complete")break; }
+oPop.document.execCommand("SaveAs"); oPop.close();
+*/
+    //var a = $("<a></a>").attr("href", src).attr("download", "myimg.jpg").appendTo("body");
+    //a[0].click();
+    //a.remove();
     //IE下 
     // var canvas = document.createElement('canvas');
     // var img = document.createElement('img');
@@ -25,28 +36,19 @@ $(function(){
     // img.src = src;
 
 
-   $("#carddownload").click(function(){
-       var imgurl="https://bing.ioliu.cn/v1?w=1000&h=300&d=";
+   $("#carddownloadm").click(function(){
+        console.log($(this).html()+"id"+$(this).attr('id'));
+                console.log($(this).parent().html()+"id"+$(this).parent().attr('id'));
+                console.log($(this).parent().prev().html()+"id"+$(this).parent().prev().attr('id'));
+                console.log($(this).parent().find("#cardimg1").html()+"id"+$(this).parent().find("#cardimg1").attr('id'));
+       var imgurl=$(this).parent().prev().find("#cardimg1")[0].src;
+       console.log(imgurl);
         downloadImage(imgurl);
     });
 
 
     
-    //登录
-      $('.dropdown-button').dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      constrain_width: false, // Does not change width of dropdown to that of the activator
-      hover: true, // Activate on hover
-      gutter: 10, // Spacing from edge
-      belowOrigin: true, // Displays dropdown below the button
-      alignment: 'left' // Displays dropdown with edge aligned to the left of button
-    }
-  );
 
-   $("#loginli").click(function(){
-        run(3);
-    });
 
     //滚动条初始化
         $.ajax({
@@ -116,13 +118,14 @@ $(function(){
             dataType: "json",
             success: function (msg) {
                 var results = msg.results;
-                var imgpathbase = "https://bing.ioliu.cn/v1/rand?w=800&h=600&d=";
+                var imgpathbase = "https://bing.ioliu.cn/v1/?w=800&h=600&d=";
                 $.each(results, function (index, member) {//index 从0开始
                     var itimes=5-times;//1,2,3,4
                     var myindex=index+1;
                     var time = member.publishedAt;
                     var mytime = time.substring(0, 10);
-                    $("#card"+itimes+""+myindex).find("img").attr('src', imgpathbase+(6*itimes+myindex));
+                    var imgpathfinal= imgpathbase+(6*itimes+myindex);
+                    $("#card"+itimes+""+myindex).find("img").attr('src',imgpathfinal);
                     $("#card"+itimes+""+myindex).find("#cardtitle1").html(member.desc);
                     $("#card"+itimes+""+myindex).find("#cardwho1").html(member.who);
                     $("#card"+itimes+""+myindex).find("#cardtime1").html(mytime);
@@ -167,13 +170,32 @@ function smoothscroll(){
     }
 }
 
+
+    //登录
+      $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 10, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  );
+
+   $("#loginli").click(function(){
+        run(3);
+    });
+
     function run(input)
     {
         if(input==1)
             alert("favorite1");
         if(input==2)
             alert("share");
-             if(input==3)
+             if(input==3){
             alert("qq登录");
+                 
+             }
     }
 });

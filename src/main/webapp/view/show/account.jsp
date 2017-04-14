@@ -4,7 +4,7 @@
     <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-    <title>个人中心</title>
+  <title>BingoCode</title>
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,7 +14,7 @@
 
 
     <link href="/view/css/accountcss.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <base target="_blank">
+
 
 </head>
 
