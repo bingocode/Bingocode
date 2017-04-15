@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/")
 public class MainController {
+
+    @RequestMapping("/")
+    public String index0() {
+        return "index";
+    }
+
     @RequestMapping("index")
     public String index() {
         return "index";
